@@ -1,16 +1,16 @@
-# CHReact.js
+# chreact.js
 
-CHReact는 간소화된 형태의 React.js 라이브러리입니다.
+chreact는 간소화된 형태의 React.js 라이브러리입니다.
 
 <br>
 
 ## 설치
 
 ```
-npm install CHReact
+npm install chreact
 ```
 ```
-yarn add CHReact
+yarn add chreact
 ```
 <br>
 
