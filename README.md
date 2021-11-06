@@ -22,7 +22,7 @@ yarn add chreact
 
 ```typescript
 import App from "./components/App";
-import initRenderer from "./lib/render";
+import { initRenderer } from "chreact";
 
 const $root = document.querySelector("#root");
 
@@ -34,7 +34,7 @@ initRenderer($root, App);
 ### App.ts
 
 ```typescript
-import useState from "../lib/hooks/useState";
+import { useState } from "chreact";
 import Counter from "./Counter";
 
 const App = () => {
@@ -72,7 +72,7 @@ export default App;
 ### Counter.ts
 
 ```typescript
-import useHandler from "../lib/hooks/useHandler";
+import { useHandler } from "chreact";
 
 interface Props {
   onIncrease: () => void;
@@ -121,7 +121,7 @@ export default Counter;
 기본적인 사용법은 리액트와 유사하게 구성하였습니다. 기존의 JSX 문법이 아닌 독자적인 문법을 한번 고안해보고 싶어서 함수 컴포넌트가 객체가 아닌 제가 template 이라고 명명한 특수한 형식의 문자열을 return 하도록 지정했습니다.
 
 ```jsx
-import useState from "../lib/hooks/useState";
+import { useState } from "chreact";
 import Counter from "./Counter";
 
 const App = () => {
@@ -208,7 +208,7 @@ div#purchase.primary-button
 import "./index.css";
 
 import App from "./components/App";
-import initRenderer from "./lib/render";
+import { initRenderer } from "chreact";
 
 const $root = document.querySelector("#root");
 
@@ -326,7 +326,7 @@ export default function initRenderer(
 **전체 코드 (참고용)**
 
 ```tsx
-import useState from "../lib/hooks/useState";
+import { useState } from "chreact";
 import Counter from "./Counter";
 
 const App = () => {
