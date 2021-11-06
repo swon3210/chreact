@@ -233,7 +233,7 @@ initRenderer($root2, App2);
 
 물론 여러개의 root 요소를 지정하는 방식은 리액트를 활용하는데 있어서 거의 시도되지 않는 방식이지만, 그래도 리액트의 이 같은 유연함을 흉내내보고자 했습니다. initRender 함수가 수행되면 Store 에는 'VStorage' 라는 이름의 인스턴스가 생성됩니다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa6273b1-6a72-4b6e-9940-3f3d16ec2464/Untitled.png)
+![image](https://user-images.githubusercontent.com/32982670/140593287-ca71b29e-3b5d-4468-a059-f358a60c7027.png)
 
 <br>
 
@@ -241,14 +241,13 @@ initRenderer($root2, App2);
 
 initRender 함수가 수행되면 Store 에는 'VStorage' 라는 이름의 인스턴스가 생성됩니다. 이 VStorage 에는 VDom 을 비롯해서 상태관리와 동적 렌더링을 수행하기 위한 모든 객체가 저장됩니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/92d135ad-535f-4d59-9037-8f06aea87077/Untitled.png)
-
+![image](https://user-images.githubusercontent.com/32982670/140593293-0385e3c4-d779-47c6-afc0-faeae55a8285.png)
 
 <br>
 
 ### stateStorage
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1ca8413d-a669-4694-a90a-cd1ededb3beb/Untitled.png)
+![image](https://user-images.githubusercontent.com/32982670/140593296-77385227-b7f9-45f0-ad18-e8a142f4e950.png)
 
 stateStorage 는 말 그대로 각 컴포넌트들이 지닌 상태들이 저장되는 객체입니다. 하나의 컴포넌트 안의 상태들은 하나의 배열에 담깁니다. 그리고 해당 함수 컴포넌트가 실행되는 순서가 key 가 되어 stateStorage 객체 안에 담기게 됩니다.
 
@@ -256,11 +255,11 @@ stateStorage 는 말 그대로 각 컴포넌트들이 지닌 상태들이 저장
 
 ### handlerStorage
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a134e826-02ff-428c-b153-8a5dd87a7c7f/Untitled.png)
+![image](https://user-images.githubusercontent.com/32982670/140593303-533bc5ba-bd0f-45be-a5e5-b4f7b2e1b91e.png)
 
 handlerStorage 는 각 컴포넌트에서 바인딩 시킨 이벤트 핸들러 함수들이 담기는 객체입니다. 이때 해당 이벤트 핸들러의 이벤트 유형 (ex: click, submit...ect) 이 각각의 핸들러들을 분류하는 key 가 되며, 핸들러 함수들은 같은 이벤트 유형끼리 배열에 담겨서 key 와 매칭됩니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bb37861f-b458-4800-b342-02cbf379f224/Untitled.png)
+![image](https://user-images.githubusercontent.com/32982670/140593307-0a334026-6991-44f5-9dd6-caf4355a46e0.png)
 
 이때 각각의 handler 객체들은 이벤트 위임에 사용될 Template 문자열과(위에서 언급한 Template 문자열과 동일) 실제 핸들링에 사용될 콜백 함수가 담깁니다.
 
@@ -268,7 +267,7 @@ handlerStorage 는 각 컴포넌트에서 바인딩 시킨 이벤트 핸들러 �
 
 ### HTMLElementStorage
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d24c3a3c-4fd2-4c05-bdec-87af66467844/Untitled.png)
+![image](https://user-images.githubusercontent.com/32982670/140593313-b0bb9e9d-c74c-4cb3-bb4b-5c05829f5005.png)
 
 HTMLElementStorage 은 동적 렌더링 과정에서 생성되는 실제 Dom 노드들이 담기는 객체입니다. 이 노드들은 자신이 생성된 순서를 key 로 하여 담기게 됩니다. 동적 렌더링 과정에서 생성되는 실제 Dom 노드에 대한 참조를 따로 저장하는 이유는 diffing 알고리즘을 통한 부분 렌더링을 위해서입니다. (아래 글에서 추가로 설명하겠습니다)
 
@@ -278,7 +277,7 @@ HTMLElementStorage 은 동적 렌더링 과정에서 생성되는 실제 Dom 노
 
 VDom 은 전체 Dom 트리를 '흉내내는' 객체입니다. Dom 이 여러 개의 노드로 이루어져 있듯, VDom 또한 여러 개의 VElement 로 이루어져 있습니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/949cad6c-863f-4692-8d1c-09158b1a3cdc/Untitled.png)
+![image](https://user-images.githubusercontent.com/32982670/140593316-a855c10f-1260-4178-945c-d2099bf80ab4.png)
 
 **VElement** 는 위와 같은 구조를 가집니다. 실제 Dom 노드의 태그 타입, id, class, attribute, style 을 대변하는 속성들로 이루어져 있으며 이 정보를 이용해서 실제 Dom 노드가 동적으로 생성됩니다.
 
@@ -286,7 +285,7 @@ VDom 은 전체 Dom 트리를 '흉내내는' 객체입니다. Dom 이 여러 개
 
 ## 렌더링 프로세스
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/95a0280d-41c8-477e-aaeb-347507f24656/Untitled.png)
+![image](https://user-images.githubusercontent.com/32982670/140593321-79ab02fe-79a8-46bc-9b89-c20476a535ed.png)
 
 <br>
 
