@@ -6,9 +6,9 @@ import {
   HTMLElementStorage,
   DomEvent,
 } from "../@types/types";
-import { domEventList } from "../constants";
-import { getGlobalEventHandler } from "../eventHandler";
-import { getHTMLElementStyles, setHTMLElementAttributes } from "../utils/utils";
+import { domEventList } from "../constants.js";
+import { getGlobalEventHandler } from "../eventHandler.js";
+import { getHTMLElementStyles, setHTMLElementAttributes } from "../utils/utils.js";
 
 const addAllDefaultEventListener = (
   handlerStorage: HandlerStorage,

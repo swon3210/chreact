@@ -1,4 +1,4 @@
-import store from "../store";
+import store from "../store.js";
 
 const useState = <T>(defaultValue: T): [T, (state: T) => void] => {
   const vStorage = store.getCurrentVStorage();

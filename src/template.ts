@@ -3,9 +3,8 @@ import {
   tagTypeList,
   attributeNameList,
   styleNameList,
-  idSeparatorUnit,
-} from "./constants";
-import { contains } from "./@types/guards";
+} from "./constants.js";
+import { contains } from "./utils/utils.js";
 
 export const isPlainText = (template: string) => {
   return template.substring(0, 5) === "text:";

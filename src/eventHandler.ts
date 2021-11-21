@@ -5,7 +5,7 @@ import {
   isAllAttributesMatch,
   isAllStyleMatch,
   isClassNamesExist,
-} from "./utils/utils";
+} from "./utils/utils.js";
 
 const isRightTarget = (
   target: HTMLElement,

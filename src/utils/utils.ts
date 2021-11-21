@@ -3,11 +3,9 @@ import {
   getAttributes,
   getClasses,
   getIds,
-  getPlainText,
   getStyles,
   getTagType,
-  isPlainText,
-} from "../template";
+} from "../template.js";
 
 export const getVElementProperty = (noBlankParentTemplate: string) => {
   const tagType = getTagType(noBlankParentTemplate);
@@ -124,4 +122,15 @@ export const setHTMLElementAttributes = (
     // TODO : 여기 as string 어떻게 지우지?
     Element.setAttribute(attributeName, attribute[attributeName] as string);
   });
+};
+
+export const getRegExp = (pattern: string, flag: string = "g") => {
+  return new RegExp(pattern, flag);
+};
+
+export const contains = <T extends string>(
+  list: Array<T> | ReadonlyArray<T>,
+  value: string
+): value is T => {
+  return list.some((item) => item === value);
 };

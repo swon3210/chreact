@@ -1,5 +1,5 @@
 import { DomEvent, Handler } from "../@types/types";
-import store from "../store";
+import store from "../store.js";
 
 const useHandler = (
   event: DomEvent,

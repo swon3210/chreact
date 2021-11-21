@@ -1,22 +1,19 @@
 import { Component, VElement } from "./@types/types";
-import VStorage from "./storage/storage";
-import store from "./store";
+import VStorage from "./storage/storage.js";
+import store from "./store.js";
 import {
   getIdCounts,
   getPlainText,
   isPlainText,
   separateTemplate,
-} from "./template";
+} from "./template.js";
 import {
   getElementSelector,
   getHTMLElementStyles,
   getVElementProperty,
-  isAllAttributesMatch,
-  isAllStyleMatch,
-  isClassNamesExist,
   setHTMLElementAttributes,
   setVElementProperty,
-} from "./utils/utils";
+} from "./utils/utils.js";
 
 const setVElementChildren = (
   vElement: VElement,

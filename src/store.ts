@@ -1,5 +1,5 @@
 import { Renderer } from "./@types/types";
-import VStorage from "./storage/storage";
+import VStorage from "./storage/storage.js";
 
 interface VStorageStore {
   [key: string]: VStorage;

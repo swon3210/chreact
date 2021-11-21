@@ -1,4 +1,4 @@
-import { attributeNameList, tagTypeList } from "../constants";
+import { attributeNameList, tagTypeList } from "../constants.js";
 
 export type TagType = typeof tagTypeList[number];
 export type AttributeName = typeof attributeNameList[number];

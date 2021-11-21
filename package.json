@@ -1,14 +1,13 @@
 {
   "name": "chreact",
-  "version": "1.0.1",
-  "main": "index.js",
+  "version": "1.0.2",
+  "main": "lib/index.js",
+  "types": "lib",
   "repository": "https://github.com/swon3210/creact",
   "author": "swon3210 <swon3210@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build:dev": "cross-env NODE_ENV=development webpack",
-    "build": "cross-env NODE_ENV=production webpack",
-    "serve": "cross-env NODE_ENV=development webpack serve"
+    "build": "tsc -p ."
   },
   "dependencies": {},
   "devDependencies": {
